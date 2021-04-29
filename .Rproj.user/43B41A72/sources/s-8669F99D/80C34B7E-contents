@@ -3,7 +3,7 @@ title = "I'm Jane Doe"
 author = "Danny Morris"
 #copyright = "2020-2021"
 description = "I help people launch personal websites, blogs, and project portfolios."
-profilePicture = "images/dm-headshot.jpg"
+profilePicture = "images/dm-headshot-bw.jpg"
 keywords = ""
 favicon = "favicons/"
 # example ["css/custom.css"]

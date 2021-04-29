@@ -55,7 +55,7 @@ body {
 p {
     line-height: 1.9em;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 a {
@@ -201,7 +201,7 @@ a:active {
     list-style: none;
     padding: 11px 30px;
     float: left;
-    font-size: 12px;
+    font-size: 16px;
     display: block;
     width: calc(100% - 30px);
 }
@@ -321,6 +321,7 @@ a:active {
 
 .sidebar .social-links i {
     margin-right: 3px;
+    color: #6a92c5;
 }
 
 .sidebar .social-links li {
@@ -477,7 +478,7 @@ a:active {
 
 .post .post-footer .meta a {
     text-decoration: none;
-    color: var(--body-color);
+    color: #6a92c5;
 }
 
 .post .post-footer .meta a:hover {

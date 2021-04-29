@@ -1,0 +1,78 @@
+---
+title: Sample R Markdown post - Covid-19 analysis
+author: Danny Morris
+summary: A sample R Markdown post that looks at Covid-19 data. Post contains R code that uses the tidyverse, Plotly, and DT packages for interactive visualization.
+date: '2021-04-22'
+output:
+  blogdown::html_page:
+    highlight: tango
+    toc: true
+slug: []
+categories:
+  - R
+  - R Markdown
+tags:
+  - R
+  - R Markdown
+Description: 'Add additional information about the post using keywords to improve SEO'
+Tags: []
+Categories: []
+DisableComments: no
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r, include=F}
+knitr::opts_chunk$set(message = F, warning = F, echo = T)
+```
+
+# Overview
+
+This post shows how to create content using R Markdown. R Markdown documents enable you to weave together plain text Markdown, R code, and interactive output such as tables and graphs in a single document.
+
+# R packages
+
+```{r}
+library(readr)
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(DT)
+library(plotly)
+```
+
+# Data
+
+```{r}
+covid_ny <- read_csv("https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-states.csv") %>%
+  filter(state == "New York")
+
+covid_ny
+```
+
+# Tables using DT
+
+```{r}
+DT::datatable(covid_ny)
+```
+
+# Visualizations using ggplot2 
+
+```{r}
+covid_ny %>%
+  gather(key, value, cases, deaths) %>%
+  ggplot(aes(x = date, y = value)) +
+  facet_wrap(~key, scales = "free_y") +
+  geom_line(color = "#02718f") +
+  labs(title = "Cumulative Covid-19 cases and deaths in the state of New York, USA") +
+  theme_bw()
+```
+
+# Visualizations using plotly
+
+```{r}
+covid_ny %>%
+  plot_ly(x = ~date, y = ~cases) %>%
+  add_markers() %>%
+  layout(title = "Cumulative Covid-19 cases and deaths in the state of New York, USA")
+```
