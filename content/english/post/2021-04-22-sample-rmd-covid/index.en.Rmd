@@ -1,7 +1,7 @@
 ---
 title: Sample R Markdown post - Covid-19 analysis
 author: Danny Morris
-summary: A sample R Markdown post that looks at Covid-19 data. Post contains R code that uses the tidyverse, Plotly, and DT packages for interactive visualization.
+summary: Analysis of Covid-19 cases in New York, USA. To add a short post summary here, add a `summary:` parameter to the post metadata.
 date: '2021-04-22'
 output:
   blogdown::html_page:

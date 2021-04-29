@@ -2,27 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Danny Morris</title>
-    <link>https://example.com/post/</link>
+    <link>/post/</link>
     <description>Recent content in Posts on Danny Morris</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 29 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/post/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Test</title>
-      <link>https://example.com/post/2021-04-29-test/</link>
-      <pubDate>Thu, 29 Apr 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://example.com/post/2021-04-29-test/</guid>
-      <description>Overview This post shows how to create content using R Markdown.</description>
-    </item>
-    
+    <lastBuildDate>Thu, 22 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Sample R Markdown post - Covid-19 analysis</title>
-      <link>https://example.com/post/2021-04-22-sample-rmd-covid/</link>
+      <link>/post/2021-04-22-sample-rmd-covid/</link>
       <pubDate>Thu, 22 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/post/2021-04-22-sample-rmd-covid/</guid>
-      <description>A sample R Markdown post that looks at Covid-19 data. Post contains R code that uses the tidyverse, Plotly, and DT packages for interactive visualization.</description>
+      <guid>/post/2021-04-22-sample-rmd-covid/</guid>
+      <description>To add a short post summary here, add a &lt;code&gt;summary:&lt;/code&gt; parameter to the post metadata.</description>
     </item>
     
   </channel>

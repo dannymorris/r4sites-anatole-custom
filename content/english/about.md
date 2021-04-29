@@ -3,26 +3,44 @@ aliases:
 - about-us
 - about-hugo
 - contact
-author: Hugo Authors
-date: "2019-02-28"
-description: Hugo, the world's fastest framework for building websites
+author: Your Name
+date: "2021-04-25"
+description: About yourself and your background including education, work experience, interests, etc.
 title: About
 ---
 
-Written in Go, Hugo is an open source static site generator available under the [Apache Licence 2.0.](https://github.com/gohugoio/hugo/blob/master/LICENSE) Hugo supports TOML, YAML and JSON data file types, Markdown and HTML content files and uses shortcodes to add rich content. Other notable features are taxonomies, multilingual mode, image processing, custom output formats, HTML/CSS/JS minification and support for Sass SCSS workflows.
+Use this page to introduce yourself and your background. Briefly describe your background, field of study, interests, and goals. Don't be too wordy otherwise you may lose your audience.
 
-Hugo makes use of a variety of open source projects including:
+Give your audience another path (in addition to the links on the homepage) to connect with you on [LinkedIn](https://www.linkedin.com/in/drmorris87/), [GitHub](https://www.github.com/dannymorris), and [email](mailto:dmorris10667@gmail.com).
 
-* https://github.com/yuin/goldmark
-* https://github.com/alecthomas/chroma
-* https://github.com/muesli/smartcrop
-* https://github.com/spf13/cobra
-* https://github.com/spf13/viper
+## Education
 
-Hugo is ideal for blogs, corporate websites, creative portfolios, online magazines, single page applications or even a website with thousands of pages.
+Write about your education here.
 
-Hugo is for people who want to hand code their own website without worrying about setting up complicated runtimes, dependencies and databases.
+- Undergrad
+- Grad school
+- Certificates
+- Certifications
+- Online courses
 
-Websites built with Hugo are extremelly fast, secure and can be deployed anywhere including, AWS, GitHub Pages, Heroku, Netlify and any other hosting provider.
+## Work Experience
 
-Learn more and contribute on [GitHub](https://github.com/gohugoio).
+Write about your work experience here.
+
+- **Job Title**, Company Name, Start/End Dates
+- **Job Title**, Company Name, Start/End Dates
+
+## Projects
+
+Write about some interesting projects here, and make sure you [link to a blog post](/post/2021-04-22-sample-rmd-covid) for each project your discuss.
+
+- **Project Name**. Project description goes here.
+- **Project Name**. Project description goes here.
+
+## Research and Publications
+
+Write about your publications or personal research projects here.
+
+## Other Interests
+
+Show your personality by writing about something of interest including hobbies, future career goals, passions, etc.

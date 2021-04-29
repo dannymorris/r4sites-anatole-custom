@@ -2,54 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Danny Morris</title>
-    <link>https://example.com/</link>
+    <link>/</link>
     <description>Recent content on Danny Morris</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 29 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 22 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Test</title>
-      <link>https://example.com/post/2021-04-29-test/</link>
-      <pubDate>Thu, 29 Apr 2021 00:00:00 +0000</pubDate>
+      <title>About</title>
+      <link>/about/</link>
+      <pubDate>Sun, 25 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/post/2021-04-29-test/</guid>
-      <description>Overview This post shows how to create content using R Markdown.</description>
+      <guid>/about/</guid>
+      <description>Use this page to introduce yourself and your background. Briefly describe your background, field of study, interests, and goals.</description>
     </item>
     
     <item>
       <title>Sample R Markdown post - Covid-19 analysis</title>
-      <link>https://example.com/post/2021-04-22-sample-rmd-covid/</link>
+      <link>/post/2021-04-22-sample-rmd-covid/</link>
       <pubDate>Thu, 22 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/post/2021-04-22-sample-rmd-covid/</guid>
-      <description>A sample R Markdown post that looks at Covid-19 data. Post contains R code that uses the tidyverse, Plotly, and DT packages for interactive visualization.</description>
+      <guid>/post/2021-04-22-sample-rmd-covid/</guid>
+      <description>To add a short post summary here, add a &lt;code&gt;summary:&lt;/code&gt; parameter to the post metadata.</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://example.com/archives/</link>
+      <link>/archives/</link>
       <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/archives/</guid>
+      <guid>/archives/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Contact</title>
-      <link>https://example.com/contact/</link>
+      <link>/contact/</link>
       <pubDate>Fri, 08 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/contact/</guid>
+      <guid>/contact/</guid>
       <description></description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>https://example.com/about/</link>
-      <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://example.com/about/</guid>
-      <description>Written in Go, Hugo is an open source static site generator available under the Apache Licence 2.</description>
     </item>
     
   </channel>
