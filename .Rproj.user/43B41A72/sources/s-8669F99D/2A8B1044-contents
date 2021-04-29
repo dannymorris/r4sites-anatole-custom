@@ -1,11 +1,5 @@
 <head>
-    
-    <!--- Google Font --->
-    <style>
-    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,700;1,400;1,700&display=swap');
-    </style>
-    <!------------------->
-    
+        
     <title> {{.Site.Params.author}}{{ with .Title }} | {{ . }}{{ end }} </title>
 
     <!-- Meta -->

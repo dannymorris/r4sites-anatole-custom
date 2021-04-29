@@ -3,7 +3,7 @@
     "path": "~/projects/r4sites/r4sites-anatole-custom/themes/anatole/layouts/partials/head.html",
     "project_path": "themes/anatole/layouts/partials/head.html",
     "type": "html",
-    "hash": "4253372727",
+    "hash": "0",
     "contents": "",
     "dirty": false,
     "created": 1619661719915.0,
@@ -12,15 +12,15 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "6,25",
+        "cursorPosition": "2,0",
         "scrollLine": "0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1619661787,
+    "lastKnownWriteTime": 1619663379,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1619661787841,
+    "last_content_update": 1619663379995,
     "read_only": false,
     "read_only_alternatives": []
 }

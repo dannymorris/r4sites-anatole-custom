@@ -3,7 +3,7 @@
     "path": "~/projects/r4sites/r4sites-anatole-custom/themes/anatole/assets/css/style.css",
     "project_path": "themes/anatole/assets/css/style.css",
     "type": "css",
-    "hash": "2914745728",
+    "hash": "0",
     "contents": "",
     "dirty": false,
     "created": 1619639857604.0,
@@ -12,15 +12,15 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "2,0",
-        "scrollLine": "0"
+        "cursorPosition": "48,20",
+        "scrollLine": "27"
     },
     "folds": "",
-    "lastKnownWriteTime": 1619661716,
+    "lastKnownWriteTime": 1619663367,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1619661716996,
+    "last_content_update": 1619663367581,
     "read_only": false,
     "read_only_alternatives": []
 }
