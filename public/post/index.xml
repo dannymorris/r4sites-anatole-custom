@@ -6,7 +6,16 @@
     <description>Recent content in Posts on Danny Morris</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 22 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 29 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Test</title>
+      <link>https://example.com/post/2021-04-29-test/</link>
+      <pubDate>Thu, 29 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/post/2021-04-29-test/</guid>
+      <description>Overview This post shows how to create content using R Markdown.</description>
+    </item>
+    
     <item>
       <title>Sample R Markdown post - Covid-19 analysis</title>
       <link>https://example.com/post/2021-04-22-sample-rmd-covid/</link>
