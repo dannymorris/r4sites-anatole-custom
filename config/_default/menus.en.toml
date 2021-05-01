@@ -11,7 +11,7 @@
   url = "/post/"
 
   [[main]]
-  name = "About"
+  name = "About Me"
   weight = 300
   identifier = "about"
   url = "/about/"

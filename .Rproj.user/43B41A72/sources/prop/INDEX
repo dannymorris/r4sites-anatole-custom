@@ -1,4 +1,5 @@
 ~%2Fprojects%2Fr4sites%2Fr4sites-anatole-custom%2Fconfig%2F_default%2Flanguages.toml="50BA7F16"
+~%2Fprojects%2Fr4sites%2Fr4sites-anatole-custom%2Fconfig%2F_default%2Fmenus.en.toml="F390B6C6"
 ~%2Fprojects%2Fr4sites%2Fr4sites-anatole-custom%2Fconfig%2F_default%2Fparams.toml="FF4CD38B"
 ~%2Fprojects%2Fr4sites%2Fr4sites-anatole-custom%2Fconfig.yaml="D2495D6F"
 ~%2Fprojects%2Fr4sites%2Fr4sites-anatole-custom%2Fcontent%2Fenglish%2F_index.md="924EFA7B"
@@ -16,5 +17,7 @@
 ~%2Fprojects%2Fr4sites%2Fr4sites-anatole-custom%2Fcontent%2Fenglish%2Fpost%2F2021-04-30-sample-post-using-sql-in-r-markdown%2Findex.en.Rmd="E9A41F17"
 ~%2Fprojects%2Fr4sites%2Fr4sites-anatole-custom%2Fcontent%2Fenglish%2Fpost%2Ffigure-shortcode.md="4A09DB69"
 ~%2Fprojects%2Fr4sites%2Fr4sites-anatole-custom%2Fthemes%2Fanatole%2Fassets%2Fcss%2Fstyle.css="02EB1FB0"
+~%2Fprojects%2Fr4sites%2Fr4sites-anatole-custom%2Fthemes%2Fanatole%2Fi18n%2Fen.toml="FFEB49B9"
 ~%2Fprojects%2Fr4sites%2Fr4sites-anatole-custom%2Fthemes%2Fanatole%2Flayouts%2Findex.html="6CDE3CA3"
+~%2Fprojects%2Fr4sites%2Fr4sites-anatole-custom%2Fthemes%2Fanatole%2Flayouts%2Fpartials%2Fcontact.html="0FED7F8F"
 ~%2Fprojects%2Fr4sites%2Fr4sites-anatole-custom%2Fthemes%2Fanatole%2Flayouts%2Fpartials%2Fhead.html="F0CDB436"
