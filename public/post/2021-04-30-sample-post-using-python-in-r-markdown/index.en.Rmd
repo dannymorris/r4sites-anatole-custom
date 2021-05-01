@@ -1,0 +1,100 @@
+---
+title: Sample post - Using Python in R Markdown
+summary: This post shows you how to use Python in an R Markdown document
+author: Danny Morris
+date: '2021-04-30'
+output:
+  blogdown::html_page:
+    highlight: tango
+    toc: true
+slug: []
+categories:
+  - Python
+tags:
+  - Python
+Description: ''
+Tags: []
+Categories: []
+DisableComments: no
+---
+
+## Overview
+
+This post shows you how to insert Python code in a R Markdown document via the [reticulate](https://rstudio.github.io/reticulate/) R package.
+
+```{r, include=F}
+knitr::opts_chunk$set(message = F, warning = F, echo = T)
+```
+
+## Specify conda environment
+
+This is optional but highly recommended. Using either Anaconda or Miniconda, create a conda environment with the libraries needed to run your analysis in Python. Using R, specify this conda enviornment with the `use_condaenv()` function from the `reticulate` package.
+
+```{r}
+# this is an R chunk
+# all other chunks are Python
+reticulate::use_condaenv("r-reticulate", required=T)
+```
+
+## Libraries
+
+```{python}
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.ensemble import IsolationForest
+```
+
+## Fit isolation forest
+
+```{python}
+rng = np.random.RandomState(42)
+
+# Generate train data
+X = 0.3 * rng.randn(100, 2)
+X_train = np.r_[X + 2, X - 2]
+# Generate some regular novel observations
+X = 0.3 * rng.randn(20, 2)
+X_test = np.r_[X + 2, X - 2]
+# Generate some abnormal novel observations
+X_outliers = rng.uniform(low=-4, high=4, size=(20, 2))
+
+# fit the model
+clf = IsolationForest(max_samples=100, random_state=rng)
+clf.fit(X_train)
+```
+
+## Predict outliers
+
+```{python}
+y_pred_train = clf.predict(X_train)
+y_pred_test = clf.predict(X_test)
+y_pred_outliers = clf.predict(X_outliers)
+```
+
+## Plot outliers
+
+```{python}
+# plot the line, the samples, and the nearest vectors to the plane
+xx, yy = np.meshgrid(np.linspace(-5, 5, 50), np.linspace(-5, 5, 50))
+Z = clf.decision_function(np.c_[xx.ravel(), yy.ravel()])
+Z = Z.reshape(xx.shape)
+
+plt.title("IsolationForest")
+plt.contourf(xx, yy, Z, cmap=plt.cm.Blues_r)
+
+b1 = plt.scatter(X_train[:, 0], X_train[:, 1], c='white',
+                 s=20, edgecolor='k')
+b2 = plt.scatter(X_test[:, 0], X_test[:, 1], c='green',
+                 s=20, edgecolor='k')
+c = plt.scatter(X_outliers[:, 0], X_outliers[:, 1], c='red',
+                s=20, edgecolor='k')
+plt.axis('tight')
+plt.xlim((-5, 5))
+plt.ylim((-5, 5))
+plt.legend([b1, b2, c],
+           ["training observations",
+            "new regular observations", "new abnormal observations"],
+           loc="upper left")
+plt.show()
+```
+

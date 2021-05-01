@@ -6,14 +6,32 @@
     <description>Recent content in Posts on Danny Morris</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 22 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 30 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Sample R Markdown post - Covid-19 analysis</title>
-      <link>/post/2021-04-22-sample-rmd-covid/</link>
+      <title>Sample post - Using Python in R Markdown</title>
+      <link>/post/2021-04-30-sample-post-using-python-in-r-markdown/</link>
+      <pubDate>Fri, 30 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2021-04-30-sample-post-using-python-in-r-markdown/</guid>
+      <description>This post shows you how to use Python in an R Markdown document</description>
+    </item>
+    
+    <item>
+      <title>Sample post - Using SQL in R Markdown</title>
+      <link>/post/2021-04-30-sample-post-using-sql-in-r-markdown/</link>
+      <pubDate>Fri, 30 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2021-04-30-sample-post-using-sql-in-r-markdown/</guid>
+      <description>This post shows you how to use SQL in an R Markdown document</description>
+    </item>
+    
+    <item>
+      <title>Sample post - Interactive tables and graphs in R</title>
+      <link>/post/2021-04-22-sample-post-tables-graphs/</link>
       <pubDate>Thu, 22 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>/post/2021-04-22-sample-rmd-covid/</guid>
-      <description>To add a short post summary here, add a &lt;code&gt;summary:&lt;/code&gt; parameter to the post metadata.</description>
+      <guid>/post/2021-04-22-sample-post-tables-graphs/</guid>
+      <description>This post demonstrates the use of DT, ggplot2, and plotly R packages for rendering beautiful tables and graphs.</description>
     </item>
     
   </channel>

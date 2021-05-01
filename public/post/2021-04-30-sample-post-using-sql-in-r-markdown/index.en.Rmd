@@ -1,0 +1,51 @@
+---
+title: Sample post - Using SQL in R Markdown
+summary: This post shows you how to use SQL in an R Markdown document
+author: Danny Morris
+date: '2021-04-30'
+output:
+  blogdown::html_page:
+    highlight: tango
+    toc: true
+slug: []
+categories:
+  - SQL
+tags:
+  - SQL
+Description: ''
+Tags: []
+Categories: []
+DisableComments: no
+editor_options: 
+  chunk_output_type: console
+---
+
+## Overview
+
+## R packages
+
+```{r}
+library(DBI)
+library(RSQLite)
+```
+
+## Create a SQLite database
+
+If you don't have access to an exisitng SQL database, use [SQLite](https://www.sqlite.org/index.html). SQLite is a local, serverless database application. SQLite is perfect for building small apps and practicing SQL.
+
+```{r}
+# create a SQLite db
+db <- dbConnect(RSQLite::SQLite(), dbname = "mydb.sqlite")
+
+# write the iris dataset to a table named IRIS
+dbWriteTable(conn = db, name = "IRIS", value = iris, overwrite = T)
+```
+
+## SQL queries
+
+```{sql, connection=db}
+SELECT * FROM IRIS
+```
+
+
+
