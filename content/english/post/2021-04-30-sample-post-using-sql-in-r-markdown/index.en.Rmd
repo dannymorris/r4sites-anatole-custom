@@ -10,8 +10,12 @@ output:
 slug: []
 categories:
   - SQL
+  - R Markdown
+  - SQLite
 tags:
   - SQL
+  - R Markdown
+  - SQLite
 Description: ''
 Tags: []
 Categories: []

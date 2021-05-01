@@ -10,8 +10,16 @@ output:
 slug: []
 categories:
   - Python
+  - R Markdown
+  - Data Science
+  - Conda
+  - Machine Learning
 tags:
   - Python
+  - R Markdown
+  - Data Science
+  - Conda 
+  - Machine Learning
 Description: ''
 Tags: []
 Categories: []
@@ -129,7 +137,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>clf <span class="op">=</span> IsolationForest(max_samples<span class="op">=</span><span class="dv">100</span>, random_state<span class="op">=</span>rng)</span>
 <span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>clf.fit(X_train)</span></code></pre></div>
 <pre><code>## IsolationForest(max_samples=100,
-##                 random_state=RandomState(MT19937) at 0x786DEA546C40)</code></pre>
+##                 random_state=RandomState(MT19937) at 0x7B5755BA4C40)</code></pre>
 </div>
 <div id="predict-outliers" class="section level2">
 <h2>Predict outliers</h2>
@@ -146,7 +154,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">&quot;IsolationForest&quot;</span>)</span>
 <span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>plt.contourf(xx, yy, Z, cmap<span class="op">=</span>plt.cm.Blues_r)</span></code></pre></div>
-<pre><code>## &lt;matplotlib.contour.QuadContourSet object at 0x786de92b5220&gt;</code></pre>
+<pre><code>## &lt;matplotlib.contour.QuadContourSet object at 0x7b5754913220&gt;</code></pre>
 <div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>b1 <span class="op">=</span> plt.scatter(X_train[:, <span class="dv">0</span>], X_train[:, <span class="dv">1</span>], c<span class="op">=</span><span class="st">&#39;white&#39;</span>,</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>                 s<span class="op">=</span><span class="dv">20</span>, edgecolor<span class="op">=</span><span class="st">&#39;k&#39;</span>)</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>b2 <span class="op">=</span> plt.scatter(X_test[:, <span class="dv">0</span>], X_test[:, <span class="dv">1</span>], c<span class="op">=</span><span class="st">&#39;green&#39;</span>,</span>

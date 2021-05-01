@@ -11,9 +11,15 @@ slug: []
 categories:
   - R
   - R Markdown
+  - DT
+  - Plotly
+  - Covid19
 tags:
   - R
   - R Markdown
+  - DT
+  - Plotly
+  - Covid19
 Description: 'Add additional information about the post using keywords to improve SEO'
 Tags: []
 Categories: []

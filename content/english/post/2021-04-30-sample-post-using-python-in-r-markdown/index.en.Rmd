@@ -10,8 +10,16 @@ output:
 slug: []
 categories:
   - Python
+  - R Markdown
+  - Data Science
+  - Conda
+  - Machine Learning
 tags:
   - Python
+  - R Markdown
+  - Data Science
+  - Conda 
+  - Machine Learning
 Description: ''
 Tags: []
 Categories: []
