@@ -15,7 +15,7 @@ images = ["images/site-feature-image.png"]
 doNotLoadAnimations = false
 # Form Spree Contact Form
 contactFormAction = "https://formspree.io/f/xvodzroq"
-googleAnalytics: "UA-196111394-3"
+googleAnalytics = "UA-196111394-3"
 # Google Site Verify
 #googleSiteVerify = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
 singleDateFormat = "2/1/2006"
