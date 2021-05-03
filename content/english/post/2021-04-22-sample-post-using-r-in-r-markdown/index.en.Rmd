@@ -8,21 +8,9 @@ output:
     highlight: tango
     toc: true
 slug: []
-categories:
-  - R
-  - R Markdown
-  - DT
-  - Plotly
-  - Covid19
-tags:
-  - R
-  - R Markdown
-  - DT
-  - Plotly
-  - Covid19
 Description: 'Add additional information about the post using keywords to improve SEO'
-Tags: []
-Categories: []
+Tags: [R, R Markdown, Data Visualization]
+Categories: [R, R Markdown, Data Visualization]
 DisableComments: no
 editor_options: 
   chunk_output_type: console
@@ -34,9 +22,37 @@ knitr::opts_chunk$set(message = F, warning = F, echo = T)
 
 # Overview
 
-This post shows you my preferred approach for authoring new posts with R Markdown and R.
+This sample post exemplifies my preferred approach for authoring new posts with R Markdown and R. The post includes a table of contents and code highlighting. The post content covers interactive HTML tables via the [DT](https://rstudio.github.io/DT/) package, static graphs via the [ggplot2](https://ggplot2.tidyverse.org/) package, and interactive plots via the [plotly](https://plotly.com/r/) package.
 
-# R packages
+View the [source code](https://github.com/dannymorris/r4sites-anatole-custom/blob/master/content/english/post/2021-04-22-sample-post-using-r-in-r-markdown/index.en.Rmd) on GitHub.
+
+# Document metadata
+
+As seen in the [source code](https://github.com/dannymorris/r4sites-anatole-custom/blob/master/content/english/post/2021-04-22-sample-post-using-r-in-r-markdown/index.en.Rmd#L1-L29), the metadata is the information between the `---` markers at the top of the source code. Here is where you specify information such as the document author, date, summary, table of contents, code highlighting scheme, tags, and categories.
+
+The metadata for this document contains the following information in the structure shown:
+
+```
+title: Sample post - Using R in R Markdown
+author: Danny Morris
+summary: This post demonstrates the use of DT, ggplot2, and plotly R packages for rendering beautiful tables and graphs in an R Markdown document.
+date: '2021-04-22'
+output:
+  blogdown::html_page:
+    highlight: tango
+    toc: true
+slug: []
+Description: 'Add additional information about the post using keywords to improve SEO'
+Tags: [R, R Markdown, Data Visualization]
+Categories: [R, R Markdown, Data Visualization]
+DisableComments: no
+editor_options: 
+  chunk_output_type: console
+```
+
+# Loading R packages
+
+I prefer to place all R packages needed for the current document in a single code chunk near the top of the document.
 
 ```{r}
 library(readr)
@@ -47,22 +63,29 @@ library(DT)
 library(plotly)
 ```
 
-# Data
+# Reading data
+
+This sample post analyzes [Covid-19 data](https://github.com/nytimes/covid-19-data).
 
 ```{r}
 covid_ny <- read_csv("https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-states.csv") %>%
   filter(state == "New York")
 
+# print the raw tibble (data.frame)
 covid_ny
 ```
 
-# Tables using DT
+# Printing HTML tables using DT
+
+The [DT](https://rstudio.github.io/DT/) R package generates attractive, feature-rich HTML tables from R data frames.
 
 ```{r}
 DT::datatable(covid_ny)
 ```
 
-# Visualizations using ggplot2 
+# Static charts using ggplot2 
+
+`ggplot2` is the leading data visualization pacakge among R users.
 
 ```{r}
 covid_ny %>%
@@ -74,7 +97,9 @@ covid_ny %>%
   theme_bw()
 ```
 
-# Visualizations using plotly
+# Interactive charts using plotly
+
+The [plotly](https://plotly.com/r/) package is an R interface to Plotly, an interactive data visualization library.
 
 ```{r}
 covid_ny %>%
