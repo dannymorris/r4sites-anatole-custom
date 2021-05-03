@@ -1,5 +1,5 @@
 ---
-title: Sample post - Interactive tables and graphs in R
+title: Sample post - Using R in R Markdown
 author: Danny Morris
 summary: This post demonstrates the use of DT, ggplot2, and plotly R packages for rendering beautiful tables and graphs in an R Markdown document.
 date: '2021-04-22'
@@ -34,7 +34,7 @@ knitr::opts_chunk$set(message = F, warning = F, echo = T)
 
 # Overview
 
-This post written with R Markdown demonstrates the use of DT, ggplot2, and plotly R packages for rendering beautiful tables and graphs.
+This post shows you my preferred approach for authoring new posts with R Markdown and R.
 
 # R packages
 

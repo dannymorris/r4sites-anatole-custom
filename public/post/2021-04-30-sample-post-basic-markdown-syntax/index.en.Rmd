@@ -1,0 +1,99 @@
+---
+title: Sample post - Basic Markdown syntax
+summary: Not familiar with Markdown? This sample post introduces the basics
+author: Danny Morris
+date: '2021-04-30'
+output:
+  blogdown::html_page:
+    highlight: tango
+    toc: true
+slug: []
+categories:
+  - Markdown
+tags:
+  - Markdown
+Description: ''
+Tags: []
+Categories: []
+DisableComments: no
+---
+
+## Overview
+
+This sample post teaches you some basic Markdown syntax.
+
+## Markdown basics
+
+```
+# Big header (H1)
+## Smaller header (H2)
+### Smaller header (H3)
+#### Smaller header (H4)
+##### Smaller header (H5)
+
+---
+
+Normal text
+
+**Bold** text
+
+*Italicized* text
+
+---
+
+[Link](http://google.com)
+
+![Render image](https://octodex.github.com/images/yaktocat.png)
+
+---
+
+Numbered lists:
+
+1. One
+2. Two
+3. Three
+
+Bullet points:
+
+* One
+  * sub-bullet
+* Two
+
+> Blockquote
+```
+
+# Big header (H1)
+## Smaller header (H2)
+### Smaller header (H3)
+#### Smaller header (H4)
+##### Smaller header (H5)
+
+---
+
+Normal text
+
+**Bold** text
+
+*Italicized* text
+
+---
+
+[URL Link](http://google.com)
+
+![Render image](https://octodex.github.com/images/yaktocat.png)
+
+---
+
+Numbered lists:
+
+1. One
+2. Two
+3. Three
+
+Bullet points:
+
+* One
+  * sub-bullet
+* Two
+
+> Blockquote

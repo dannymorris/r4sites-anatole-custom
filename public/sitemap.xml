@@ -8,6 +8,9 @@
     <loc>/post/</loc>
     <lastmod>2021-04-30T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>/post/2021-04-30-sample-post-basic-markdown-syntax/</loc>
+    <lastmod>2021-04-30T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/post/2021-04-30-sample-post-using-python-in-r-markdown/</loc>
     <lastmod>2021-04-30T00:00:00+00:00</lastmod>
   </url><url>
@@ -17,7 +20,7 @@
     <loc>/about/</loc>
     <lastmod>2021-04-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/post/2021-04-22-sample-post-tables-graphs/</loc>
+    <loc>/post/2021-04-22-sample-post-using-r-in-r-markdown/</loc>
     <lastmod>2021-04-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/archives/</loc>

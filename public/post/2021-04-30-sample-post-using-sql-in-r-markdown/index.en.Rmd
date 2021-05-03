@@ -10,8 +10,12 @@ output:
 slug: []
 categories:
   - SQL
+  - R Markdown
+  - SQLite
 tags:
   - SQL
+  - R Markdown
+  - SQLite
 Description: ''
 Tags: []
 Categories: []
@@ -21,6 +25,8 @@ editor_options:
 ---
 
 ## Overview
+
+This sample post shows you two different ways to use SQL in an R Markdown document.
 
 ## R packages
 
@@ -41,10 +47,25 @@ db <- dbConnect(RSQLite::SQLite(), dbname = "mydb.sqlite")
 dbWriteTable(conn = db, name = "IRIS", value = iris, overwrite = T)
 ```
 
-## SQL queries
+## Pure SQL code chunks
 
 ```{sql, connection=db}
-SELECT * FROM IRIS
+SELECT Species, COUNT(1) as CNT 
+FROM IRIS
+GROUP BY Species
+```
+
+## Embedding SQL in R code
+
+```{r}
+DBI::dbGetQuery(
+  conn = db,
+  statement = "
+  SELECT Species, COUNT(1) as CNT 
+  FROM IRIS
+  GROUP BY Species
+  "
+)
 ```
 
 
