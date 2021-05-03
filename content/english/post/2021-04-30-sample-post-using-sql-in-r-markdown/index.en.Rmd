@@ -18,7 +18,33 @@ editor_options:
 
 ## Overview
 
-This sample post shows you two different ways to use SQL in an R Markdown document.
+This sample post shows you two different ways to use SQL in an R Markdown document. The post includes a table of contents and code highlighting. The post content covers inserting and executing pure SQL code chunks and using R to execute SQL queries.
+
+View the [source code](https://github.com/dannymorris/r4sites-anatole-custom/blob/master/content/english/post/2021-04-30-sample-post-using-sql-in-r-markdown/index.en.Rmd) on GitHub.
+
+## Document metadata
+
+As seen in the [source code](https://github.com/dannymorris/r4sites-anatole-custom/blob/master/content/english/post/2021-04-30-sample-post-using-sql-in-r-markdown/index.en.Rmd#L1-L17), the metadata is the information between the `---` markers at the top of the source code. Here is where you specify information such as the document author, date, summary, table of contents, code highlighting scheme, tags, and categories.
+
+The metadata for this document contains the following information in the structure shown:
+
+```
+title: Sample post - Using SQL in R Markdown
+summary: This post shows you how to use SQL in an R Markdown document
+author: Danny Morris
+date: '2021-04-30'
+output:
+  blogdown::html_page:
+    highlight: tango
+    toc: true
+slug: []
+Description: ''
+Tags: [SQL, SQLite]
+Categories: [SQL, SQLite]
+DisableComments: no
+editor_options: 
+  chunk_output_type: console
+```
 
 ## R packages
 

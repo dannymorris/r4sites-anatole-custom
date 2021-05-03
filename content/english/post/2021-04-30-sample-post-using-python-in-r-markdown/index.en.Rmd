@@ -12,6 +12,8 @@ Description: ''
 Tags: [Python, Conda, Scikit-Learn]
 Categories: [Python, Conda, Scikit-Learn]
 DisableComments: no
+editor_options: 
+  chunk_output_type: console
 ---
 
 ```{r, include=F}
@@ -26,7 +28,7 @@ View the [source code](https://github.com/dannymorris/r4sites-anatole-custom/blo
 
 ## Document metadata
 
-As seen in the [source code](https://github.com/dannymorris/r4sites-anatole-custom/blob/master/content/english/post/2021-04-30-sample-post-using-python-in-r-markdown/index.en.Rmd#L1-L29), the metadata is the information between the `---` markers at the top of the source code. Here is where you specify information such as the document author, date, summary, table of contents, code highlighting scheme, tags, and categories.
+As seen in the [source code](https://github.com/dannymorris/r4sites-anatole-custom/blob/master/content/english/post/2021-04-30-sample-post-using-python-in-r-markdown/index.en.Rmd#L1-L17), the metadata is the information between the `---` markers at the top of the source code. Here is where you specify information such as the document author, date, summary, table of contents, code highlighting scheme, tags, and categories.
 
 The metadata for this document contains the following information in the structure shown:
 

@@ -99,7 +99,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="document-metadata" class="section level2">
 <h2>Document metadata</h2>
-<p>As seen in the <a href="https://github.com/dannymorris/r4sites-anatole-custom/blob/master/content/english/post/2021-04-30-sample-post-using-python-in-r-markdown/index.en.Rmd#L1-L29">source code</a>, the metadata is the information between the <code>---</code> markers at the top of the source code. Here is where you specify information such as the document author, date, summary, table of contents, code highlighting scheme, tags, and categories.</p>
+<p>As seen in the <a href="https://github.com/dannymorris/r4sites-anatole-custom/blob/master/content/english/post/2021-04-30-sample-post-using-python-in-r-markdown/index.en.Rmd#L1-L17">source code</a>, the metadata is the information between the <code>---</code> markers at the top of the source code. Here is where you specify information such as the document author, date, summary, table of contents, code highlighting scheme, tags, and categories.</p>
 <p>The metadata for this document contains the following information in the structure shown:</p>
 <pre><code>title: Sample post - Using Python in R Markdown
 summary: This post shows you how to use Python in an R Markdown document
@@ -145,7 +145,7 @@ DisableComments: no</code></pre>
 <span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>clf <span class="op">=</span> IsolationForest(max_samples<span class="op">=</span><span class="dv">100</span>, random_state<span class="op">=</span>rng)</span>
 <span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>clf.fit(X_train)</span></code></pre></div>
 <pre><code>## IsolationForest(max_samples=100,
-##                 random_state=RandomState(MT19937) at 0x7D675C3CCC40)</code></pre>
+##                 random_state=RandomState(MT19937) at 0x796F44E26C40)</code></pre>
 </div>
 <div id="predict-outliers" class="section level2">
 <h2>Predict outliers</h2>
@@ -162,7 +162,7 @@ DisableComments: no</code></pre>
 <span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">&quot;IsolationForest&quot;</span>)</span>
 <span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>plt.contourf(xx, yy, Z, cmap<span class="op">=</span>plt.cm.Blues_r)</span></code></pre></div>
-<pre><code>## &lt;matplotlib.contour.QuadContourSet object at 0x7d675b13c220&gt;</code></pre>
+<pre><code>## &lt;matplotlib.contour.QuadContourSet object at 0x796f3fb96220&gt;</code></pre>
 <div class="sourceCode" id="cb9"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>b1 <span class="op">=</span> plt.scatter(X_train[:, <span class="dv">0</span>], X_train[:, <span class="dv">1</span>], c<span class="op">=</span><span class="st">&#39;white&#39;</span>,</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>                 s<span class="op">=</span><span class="dv">20</span>, edgecolor<span class="op">=</span><span class="st">&#39;k&#39;</span>)</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>b2 <span class="op">=</span> plt.scatter(X_test[:, <span class="dv">0</span>], X_test[:, <span class="dv">1</span>], c<span class="op">=</span><span class="st">&#39;green&#39;</span>,</span>
