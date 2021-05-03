@@ -22,7 +22,7 @@ knitr::opts_chunk$set(message = F, warning = F, echo = T)
 
 ## Overview
 
-This sample post exemplifies my preferred approach for authoring new posts with R Markdown and R. he post includes a table of contents and code highlighting. The post content covers the use of Conda environments, inserting Python code chunks, and displaying plots.
+This sample post teaches you my preferred approach for authoring new posts that need to execute Python code. The post includes a table of contents and code highlighting. The post content covers the use of Conda environments, inserting Python code chunks, and displaying plots.
 
 View the [source code](https://github.com/dannymorris/r4sites-anatole-custom/blob/master/content/english/post/2021-04-30-sample-post-using-python-in-r-markdown/index.en.Rmd) on GitHub.
 
@@ -48,9 +48,9 @@ Categories: [Python, Conda, Scikit-Learn]
 DisableComments: no
 ```
 
-## Specify conda environment
+## Activating conda environment
 
-This is optional but highly recommended. Using either Anaconda or Miniconda, create a conda environment with the libraries needed to run your analysis in Python. Using R, specify this conda enviornment with the `use_condaenv()` function from the `reticulate` package.
+This is optional but highly recommended. Use Conda environments to inform R Markdown of the Python environment you intend to use to execute the Python code in the post. Using either Anaconda or Miniconda, create a conda environment with the libraries needed to run your analysis in Python. Using the `reticulate` package in R, specify this conda enviornment at the beginning of the document using the `use_condaenv()` function.
 
 ```{r}
 # this is an R chunk

@@ -22,7 +22,7 @@ knitr::opts_chunk$set(message = F, warning = F, echo = T)
 
 # Overview
 
-This sample post exemplifies my preferred approach for authoring new posts with R Markdown and R. The post includes a table of contents and code highlighting. The post content covers interactive HTML tables via the [DT](https://rstudio.github.io/DT/) package, static graphs via the [ggplot2](https://ggplot2.tidyverse.org/) package, and interactive plots via the [plotly](https://plotly.com/r/) package.
+This sample post teaches you my preferred approach for authoring new posts that need to execute R code. The post includes a table of contents and code highlighting. The post content covers interactive HTML tables via the [DT](https://rstudio.github.io/DT/) package, static graphs via the [ggplot2](https://ggplot2.tidyverse.org/) package, and interactive plots via the [plotly](https://plotly.com/r/) package.
 
 View the [source code](https://github.com/dannymorris/r4sites-anatole-custom/blob/master/content/english/post/2021-04-22-sample-post-using-r-in-r-markdown/index.en.Rmd) on GitHub.
 

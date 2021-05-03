@@ -86,7 +86,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li><a href="#overview">Overview</a></li>
 <li><a href="#document-metadata">Document metadata</a></li>
-<li><a href="#specify-conda-environment">Specify conda environment</a></li>
+<li><a href="#activating-conda-environment">Activating conda environment</a></li>
 <li><a href="#load-python-packages">Load Python packages</a></li>
 <li><a href="#fit-isolation-forest">Fit isolation forest</a></li>
 <li><a href="#predict-outliers">Predict outliers</a></li>
@@ -96,7 +96,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 
 <div id="overview" class="section level2">
 <h2>Overview</h2>
-<p>This sample post exemplifies my preferred approach for authoring new posts with R Markdown and R. he post includes a table of contents and code highlighting. The post content covers the use of Conda environments, inserting Python code chunks, and displaying plots.</p>
+<p>This sample post teaches you my preferred approach for authoring new posts that need to execute Python code. The post includes a table of contents and code highlighting. The post content covers the use of Conda environments, inserting Python code chunks, and displaying plots.</p>
 <p>View the <a href="https://github.com/dannymorris/r4sites-anatole-custom/blob/master/content/english/post/2021-04-30-sample-post-using-python-in-r-markdown/index.en.Rmd">source code</a> on GitHub.</p>
 </div>
 <div id="document-metadata" class="section level2">
@@ -117,9 +117,9 @@ Tags: [Python, Conda, Scikit-Learn]
 Categories: [Python, Conda, Scikit-Learn]
 DisableComments: no</code></pre>
 </div>
-<div id="specify-conda-environment" class="section level2">
-<h2>Specify conda environment</h2>
-<p>This is optional but highly recommended. Using either Anaconda or Miniconda, create a conda environment with the libraries needed to run your analysis in Python. Using R, specify this conda enviornment with the <code>use_condaenv()</code> function from the <code>reticulate</code> package.</p>
+<div id="activating-conda-environment" class="section level2">
+<h2>Activating conda environment</h2>
+<p>This is optional but highly recommended. Use Conda environments to inform R Markdown of the Python environment you intend to use to execute the Python code in the post. Using either Anaconda or Miniconda, create a conda environment with the libraries needed to run your analysis in Python. Using the <code>reticulate</code> package in R, specify this conda enviornment at the beginning of the document using the <code>use_condaenv()</code> function.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># this is an R chunk</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co"># all other chunks are Python</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>reticulate<span class="sc">::</span><span class="fu">use_condaenv</span>(<span class="st">&quot;r-reticulate&quot;</span>, <span class="at">required=</span>T)</span></code></pre></div>
@@ -147,7 +147,7 @@ DisableComments: no</code></pre>
 <span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>clf <span class="op">=</span> IsolationForest(max_samples<span class="op">=</span><span class="dv">100</span>, random_state<span class="op">=</span>rng)</span>
 <span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>clf.fit(X_train)</span></code></pre></div>
 <pre><code>## IsolationForest(max_samples=100,
-##                 random_state=RandomState(MT19937) at 0x7E181E53EC40)</code></pre>
+##                 random_state=RandomState(MT19937) at 0x7CD4EBD41C40)</code></pre>
 </div>
 <div id="predict-outliers" class="section level2">
 <h2>Predict outliers</h2>
@@ -164,7 +164,7 @@ DisableComments: no</code></pre>
 <span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">&quot;IsolationForest&quot;</span>)</span>
 <span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>plt.contourf(xx, yy, Z, cmap<span class="op">=</span>plt.cm.Blues_r)</span></code></pre></div>
-<pre><code>## &lt;matplotlib.contour.QuadContourSet object at 0x7e181d2ad220&gt;</code></pre>
+<pre><code>## &lt;matplotlib.contour.QuadContourSet object at 0x7cd4eaab0220&gt;</code></pre>
 <div class="sourceCode" id="cb9"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>b1 <span class="op">=</span> plt.scatter(X_train[:, <span class="dv">0</span>], X_train[:, <span class="dv">1</span>], c<span class="op">=</span><span class="st">&#39;white&#39;</span>,</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>                 s<span class="op">=</span><span class="dv">20</span>, edgecolor<span class="op">=</span><span class="st">&#39;k&#39;</span>)</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>b2 <span class="op">=</span> plt.scatter(X_test[:, <span class="dv">0</span>], X_test[:, <span class="dv">1</span>], c<span class="op">=</span><span class="st">&#39;green&#39;</span>,</span>
