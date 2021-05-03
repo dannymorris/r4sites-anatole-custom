@@ -8,14 +8,6 @@ output:
     highlight: tango
     toc: true
 slug: []
-categories:
-  - SQL
-  - R Markdown
-  - SQLite
-tags:
-  - SQL
-  - R Markdown
-  - SQLite
 Description: ''
 Tags: [SQL, SQLite]
 Categories: [SQL, SQLite]
