@@ -58,7 +58,7 @@ This is optional but highly recommended. Using either Anaconda or Miniconda, cre
 reticulate::use_condaenv("r-reticulate", required=T)
 ```
 
-## Libraries
+## Load Python packages
 
 ```{python}
 import numpy as np

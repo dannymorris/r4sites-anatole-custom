@@ -50,9 +50,9 @@ editor_options:
   chunk_output_type: console
 ```
 
-# Loading R packages
+# Load R packages
 
-I prefer to place all R packages needed for the current document in a single code chunk near the top of the document.
+I prefer to load all R packages needed for the current document in a single code chunk near the top of the document.
 
 ```{r}
 library(readr)
@@ -63,7 +63,7 @@ library(DT)
 library(plotly)
 ```
 
-# Reading data
+# Read data
 
 This sample post analyzes [Covid-19 data](https://github.com/nytimes/covid-19-data).
 

@@ -12,6 +12,8 @@ Description: ''
 Tags: [Python, Conda, Scikit-Learn]
 Categories: [Python, Conda, Scikit-Learn]
 DisableComments: no
+editor_options: 
+  chunk_output_type: console
 ---
 
 <script src="{{< blogdown/postref >}}index.en_files/header-attrs/header-attrs.js"></script>
@@ -85,7 +87,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="#overview">Overview</a></li>
 <li><a href="#document-metadata">Document metadata</a></li>
 <li><a href="#specify-conda-environment">Specify conda environment</a></li>
-<li><a href="#libraries">Libraries</a></li>
+<li><a href="#load-python-packages">Load Python packages</a></li>
 <li><a href="#fit-isolation-forest">Fit isolation forest</a></li>
 <li><a href="#predict-outliers">Predict outliers</a></li>
 <li><a href="#plot-outliers">Plot outliers</a></li>
@@ -122,8 +124,8 @@ DisableComments: no</code></pre>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co"># all other chunks are Python</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>reticulate<span class="sc">::</span><span class="fu">use_condaenv</span>(<span class="st">&quot;r-reticulate&quot;</span>, <span class="at">required=</span>T)</span></code></pre></div>
 </div>
-<div id="libraries" class="section level2">
-<h2>Libraries</h2>
+<div id="load-python-packages" class="section level2">
+<h2>Load Python packages</h2>
 <div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.ensemble <span class="im">import</span> IsolationForest</span></code></pre></div>
@@ -145,7 +147,7 @@ DisableComments: no</code></pre>
 <span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>clf <span class="op">=</span> IsolationForest(max_samples<span class="op">=</span><span class="dv">100</span>, random_state<span class="op">=</span>rng)</span>
 <span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>clf.fit(X_train)</span></code></pre></div>
 <pre><code>## IsolationForest(max_samples=100,
-##                 random_state=RandomState(MT19937) at 0x796F44E26C40)</code></pre>
+##                 random_state=RandomState(MT19937) at 0x7E181E53EC40)</code></pre>
 </div>
 <div id="predict-outliers" class="section level2">
 <h2>Predict outliers</h2>
@@ -162,7 +164,7 @@ DisableComments: no</code></pre>
 <span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">&quot;IsolationForest&quot;</span>)</span>
 <span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>plt.contourf(xx, yy, Z, cmap<span class="op">=</span>plt.cm.Blues_r)</span></code></pre></div>
-<pre><code>## &lt;matplotlib.contour.QuadContourSet object at 0x796f3fb96220&gt;</code></pre>
+<pre><code>## &lt;matplotlib.contour.QuadContourSet object at 0x7e181d2ad220&gt;</code></pre>
 <div class="sourceCode" id="cb9"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>b1 <span class="op">=</span> plt.scatter(X_train[:, <span class="dv">0</span>], X_train[:, <span class="dv">1</span>], c<span class="op">=</span><span class="st">&#39;white&#39;</span>,</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>                 s<span class="op">=</span><span class="dv">20</span>, edgecolor<span class="op">=</span><span class="st">&#39;k&#39;</span>)</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>b2 <span class="op">=</span> plt.scatter(X_test[:, <span class="dv">0</span>], X_test[:, <span class="dv">1</span>], c<span class="op">=</span><span class="st">&#39;green&#39;</span>,</span>

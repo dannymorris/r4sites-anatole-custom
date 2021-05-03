@@ -46,14 +46,16 @@ editor_options:
   chunk_output_type: console
 ```
 
-## R packages
+## Load R packages
+
+I prefer to load all R packages needed for the current document in a single code chunk near the top of the document.
 
 ```{r}
 library(DBI)
 library(RSQLite)
 ```
 
-## Create a SQLite database
+## Create and connect to a SQLite database
 
 If you don't have access to an exisitng SQL database, use [SQLite](https://www.sqlite.org/index.html). SQLite is a local, serverless database application. SQLite is perfect for building small apps and practicing SQL.
 
@@ -65,7 +67,9 @@ db <- dbConnect(RSQLite::SQLite(), dbname = "mydb.sqlite")
 dbWriteTable(conn = db, name = "IRIS", value = iris, overwrite = T)
 ```
 
-## Pure SQL code chunks
+## Executing pure SQL code chunks
+
+To insert and execute pure SQL directly inside an R Markdown document, create a `sql` code chunk. ([</> Code](https://github.com/dannymorris/r4sites-anatole-custom/blob/master/content/english/post/2021-04-30-sample-post-using-sql-in-r-markdown/index.en.Rmd)). Make sure you have an active database connection, as shown in the previous code chunk.
 
 ```{sql, connection=db}
 SELECT Species, COUNT(1) as CNT 
@@ -73,7 +77,9 @@ FROM IRIS
 GROUP BY Species
 ```
 
-## Embedding SQL in R code
+## Using R to execute SQL
+
+To use R as a SQL client, use the `dbGetQuery()` function from the `DBI` R package to execute a SQL query. An active database connection is required. Note the following chunk is an `r` code chunk and not `sql`. [</> Code](https://github.com/dannymorris/r4sites-anatole-custom/blob/master/content/english/post/2021-04-30-sample-post-using-sql-in-r-markdown/index.en.Rmd#)
 
 ```{r}
 DBI::dbGetQuery(

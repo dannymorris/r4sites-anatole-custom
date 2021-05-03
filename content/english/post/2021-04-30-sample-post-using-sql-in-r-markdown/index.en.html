@@ -86,10 +86,10 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li><a href="#overview">Overview</a></li>
 <li><a href="#document-metadata">Document metadata</a></li>
-<li><a href="#r-packages">R packages</a></li>
-<li><a href="#create-a-sqlite-database">Create a SQLite database</a></li>
-<li><a href="#pure-sql-code-chunks">Pure SQL code chunks</a></li>
-<li><a href="#embedding-sql-in-r-code">Embedding SQL in R code</a></li>
+<li><a href="#load-r-packages">Load R packages</a></li>
+<li><a href="#create-and-connect-to-a-sqlite-database">Create and connect to a SQLite database</a></li>
+<li><a href="#executing-pure-sql-code-chunks">Executing pure SQL code chunks</a></li>
+<li><a href="#using-r-to-execute-sql">Using R to execute SQL</a></li>
 </ul>
 </div>
 
@@ -118,13 +118,14 @@ DisableComments: no
 editor_options: 
   chunk_output_type: console</code></pre>
 </div>
-<div id="r-packages" class="section level2">
-<h2>R packages</h2>
+<div id="load-r-packages" class="section level2">
+<h2>Load R packages</h2>
+<p>I prefer to load all R packages needed for the current document in a single code chunk near the top of the document.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(DBI)</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(RSQLite)</span></code></pre></div>
 </div>
-<div id="create-a-sqlite-database" class="section level2">
-<h2>Create a SQLite database</h2>
+<div id="create-and-connect-to-a-sqlite-database" class="section level2">
+<h2>Create and connect to a SQLite database</h2>
 <p>If you don’t have access to an exisitng SQL database, use <a href="https://www.sqlite.org/index.html">SQLite</a>. SQLite is a local, serverless database application. SQLite is perfect for building small apps and practicing SQL.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># create a SQLite db</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>db <span class="ot">&lt;-</span> <span class="fu">dbConnect</span>(RSQLite<span class="sc">::</span><span class="fu">SQLite</span>(), <span class="at">dbname =</span> <span class="st">&quot;mydb.sqlite&quot;</span>)</span>
@@ -132,8 +133,9 @@ editor_options:
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># write the iris dataset to a table named IRIS</span></span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">dbWriteTable</span>(<span class="at">conn =</span> db, <span class="at">name =</span> <span class="st">&quot;IRIS&quot;</span>, <span class="at">value =</span> iris, <span class="at">overwrite =</span> T)</span></code></pre></div>
 </div>
-<div id="pure-sql-code-chunks" class="section level2">
-<h2>Pure SQL code chunks</h2>
+<div id="executing-pure-sql-code-chunks" class="section level2">
+<h2>Executing pure SQL code chunks</h2>
+<p>To insert and execute pure SQL directly inside an R Markdown document, create a <code>sql</code> code chunk. (<a href="https://github.com/dannymorris/r4sites-anatole-custom/blob/master/content/english/post/2021-04-30-sample-post-using-sql-in-r-markdown/index.en.Rmd">&lt;/&gt; Code</a>). Make sure you have an active database connection, as shown in the previous code chunk.</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> Species, <span class="fu">COUNT</span>(<span class="dv">1</span>) <span class="kw">as</span> CNT </span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> IRIS</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="kw">GROUP</span> <span class="kw">BY</span> Species</span></code></pre></div>
@@ -163,8 +165,9 @@ editor_options:
 </table>
 </div>
 </div>
-<div id="embedding-sql-in-r-code" class="section level2">
-<h2>Embedding SQL in R code</h2>
+<div id="using-r-to-execute-sql" class="section level2">
+<h2>Using R to execute SQL</h2>
+<p>To use R as a SQL client, use the <code>dbGetQuery()</code> function from the <code>DBI</code> R package to execute a SQL query. An active database connection is required. Note the following chunk is an <code>r</code> code chunk and not <code>sql</code>. <a href="https://github.com/dannymorris/r4sites-anatole-custom/blob/master/content/english/post/2021-04-30-sample-post-using-sql-in-r-markdown/index.en.Rmd#">&lt;/&gt; Code</a></p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>DBI<span class="sc">::</span><span class="fu">dbGetQuery</span>(</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">conn =</span> db,</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">statement =</span> <span class="st">&quot;</span></span>
