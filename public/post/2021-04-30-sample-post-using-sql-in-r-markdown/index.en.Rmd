@@ -8,17 +8,9 @@ output:
     highlight: tango
     toc: true
 slug: []
-categories:
-  - SQL
-  - R Markdown
-  - SQLite
-tags:
-  - SQL
-  - R Markdown
-  - SQLite
 Description: ''
-Tags: []
-Categories: []
+Tags: [SQL, SQLite]
+Categories: [SQL, SQLite]
 DisableComments: no
 editor_options: 
   chunk_output_type: console
@@ -26,16 +18,44 @@ editor_options:
 
 ## Overview
 
-This sample post shows you two different ways to use SQL in an R Markdown document.
+This sample post teaches you my preferred approach for authoring new posts that need to execute SQL code. The post includes a table of contents and code highlighting. The post content covers inserting and executing pure SQL code chunks and using R to execute SQL queries.
 
-## R packages
+View the [source code](https://github.com/dannymorris/r4sites-anatole-custom/blob/master/content/english/post/2021-04-30-sample-post-using-sql-in-r-markdown/index.en.Rmd) on GitHub.
+
+## Document metadata
+
+As seen in the [source code](https://github.com/dannymorris/r4sites-anatole-custom/blob/master/content/english/post/2021-04-30-sample-post-using-sql-in-r-markdown/index.en.Rmd#L1-L17), the metadata is the information between the `---` markers at the top of the source code. Here is where you specify information such as the document author, date, summary, table of contents, code highlighting scheme, tags, and categories.
+
+The metadata for this document contains the following information in the structure shown:
+
+```
+title: Sample post - Using SQL in R Markdown
+summary: This post shows you how to use SQL in an R Markdown document
+author: Danny Morris
+date: '2021-04-30'
+output:
+  blogdown::html_page:
+    highlight: tango
+    toc: true
+slug: []
+Description: ''
+Tags: [SQL, SQLite]
+Categories: [SQL, SQLite]
+DisableComments: no
+editor_options: 
+  chunk_output_type: console
+```
+
+## Load R packages
+
+I prefer to load all R packages needed for the current document in a single code chunk near the top of the document.
 
 ```{r}
 library(DBI)
 library(RSQLite)
 ```
 
-## Create a SQLite database
+## Create and connect to a SQLite database
 
 If you don't have access to an exisitng SQL database, use [SQLite](https://www.sqlite.org/index.html). SQLite is a local, serverless database application. SQLite is perfect for building small apps and practicing SQL.
 
@@ -47,7 +67,9 @@ db <- dbConnect(RSQLite::SQLite(), dbname = "mydb.sqlite")
 dbWriteTable(conn = db, name = "IRIS", value = iris, overwrite = T)
 ```
 
-## Pure SQL code chunks
+## Executing pure SQL code chunks
+
+To insert and execute pure SQL directly inside an R Markdown document, create a `sql` code chunk. ([</> Code](https://github.com/dannymorris/r4sites-anatole-custom/blob/master/content/english/post/2021-04-30-sample-post-using-sql-in-r-markdown/index.en.Rmd)). Make sure you have an active database connection, as shown in the previous code chunk.
 
 ```{sql, connection=db}
 SELECT Species, COUNT(1) as CNT 
@@ -55,7 +77,9 @@ FROM IRIS
 GROUP BY Species
 ```
 
-## Embedding SQL in R code
+## Using R to execute SQL
+
+To use R as a SQL client, use the `dbGetQuery()` function from the `DBI` R package to execute a SQL query. An active database connection is required. Note the following chunk is an `r` code chunk and not `sql`. [</> Code](https://github.com/dannymorris/r4sites-anatole-custom/blob/master/content/english/post/2021-04-30-sample-post-using-sql-in-r-markdown/index.en.Rmd#)
 
 ```{r}
 DBI::dbGetQuery(

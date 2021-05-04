@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>R Markdown on Danny Morris</title>
+    <link>/tags/r-markdown/</link>
+    <description>Recent content in R Markdown on Danny Morris</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 22 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/r-markdown/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sample post - Using R in R Markdown</title>
+      <link>/post/2021-04-22-sample-post-using-r-in-r-markdown/</link>
+      <pubDate>Thu, 22 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2021-04-22-sample-post-using-r-in-r-markdown/</guid>
+      <description>This post demonstrates the use of DT, ggplot2, and plotly R packages for rendering beautiful tables and graphs in an R Markdown document.</description>
+    </item>
+    
+  </channel>
+</rss>

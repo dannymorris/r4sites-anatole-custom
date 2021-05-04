@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SQLite on Danny Morris</title>
+    <link>/tags/sqlite/</link>
+    <description>Recent content in SQLite on Danny Morris</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 30 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/sqlite/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sample post - Using SQL in R Markdown</title>
+      <link>/post/2021-04-30-sample-post-using-sql-in-r-markdown/</link>
+      <pubDate>Fri, 30 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2021-04-30-sample-post-using-sql-in-r-markdown/</guid>
+      <description>This post shows you how to use SQL in an R Markdown document</description>
+    </item>
+    
+  </channel>
+</rss>

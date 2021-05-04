@@ -8,35 +8,49 @@ output:
     highlight: tango
     toc: true
 slug: []
-categories:
-  - Python
-  - R Markdown
-  - Data Science
-  - Conda
-  - Machine Learning
-tags:
-  - Python
-  - R Markdown
-  - Data Science
-  - Conda 
-  - Machine Learning
 Description: ''
-Tags: []
-Categories: []
+Tags: [Python, Conda, Scikit-Learn]
+Categories: [Python, Conda, Scikit-Learn]
 DisableComments: no
+editor_options: 
+  chunk_output_type: console
 ---
-
-## Overview
-
-This post shows you how to insert Python code in a R Markdown document via the [reticulate](https://rstudio.github.io/reticulate/) R package.
 
 ```{r, include=F}
 knitr::opts_chunk$set(message = F, warning = F, echo = T)
 ```
 
-## Specify conda environment
+## Overview
 
-This is optional but highly recommended. Using either Anaconda or Miniconda, create a conda environment with the libraries needed to run your analysis in Python. Using R, specify this conda enviornment with the `use_condaenv()` function from the `reticulate` package.
+This sample post teaches you my preferred approach for authoring new posts that need to execute Python code. The post includes a table of contents and code highlighting. The post content covers the use of Conda environments, inserting Python code chunks, and displaying plots.
+
+View the [source code](https://github.com/dannymorris/r4sites-anatole-custom/blob/master/content/english/post/2021-04-30-sample-post-using-python-in-r-markdown/index.en.Rmd) on GitHub.
+
+## Document metadata
+
+As seen in the [source code](https://github.com/dannymorris/r4sites-anatole-custom/blob/master/content/english/post/2021-04-30-sample-post-using-python-in-r-markdown/index.en.Rmd#L1-L17), the metadata is the information between the `---` markers at the top of the source code. Here is where you specify information such as the document author, date, summary, table of contents, code highlighting scheme, tags, and categories.
+
+The metadata for this document contains the following information in the structure shown:
+
+```
+title: Sample post - Using Python in R Markdown
+summary: This post shows you how to use Python in an R Markdown document
+author: Danny Morris
+date: '2021-04-30'
+output:
+  blogdown::html_page:
+    highlight: tango
+    toc: true
+slug: []
+Description: ''
+Tags: [Python, Conda, Scikit-Learn]
+Categories: [Python, Conda, Scikit-Learn]
+DisableComments: no
+```
+
+## Activating conda environment
+
+This is optional but highly recommended. Use Conda environments to inform R Markdown of the Python environment you intend to use to execute the Python code in the post. Using either Anaconda or Miniconda, create a conda environment with the libraries needed to run your analysis in Python. Using the `reticulate` package in R, specify this conda enviornment at the beginning of the document using the `use_condaenv()` function.
 
 ```{r}
 # this is an R chunk
@@ -44,7 +58,7 @@ This is optional but highly recommended. Using either Anaconda or Miniconda, cre
 reticulate::use_condaenv("r-reticulate", required=T)
 ```
 
-## Libraries
+## Load Python packages
 
 ```{python}
 import numpy as np

@@ -3,24 +3,16 @@ title: Sample post - Basic Markdown syntax
 summary: Not familiar with Markdown? This sample post introduces the basics
 author: Danny Morris
 date: '2021-04-30'
-output:
-  blogdown::html_page:
-    highlight: tango
-    toc: true
 slug: []
-categories:
-  - Markdown
-tags:
-  - Markdown
 Description: ''
-Tags: []
-Categories: []
+Tags: [Markdown]
+Categories: [Markdown]
 DisableComments: no
 ---
 
 ## Overview
 
-This sample post teaches you some basic Markdown syntax.
+This sample post teaches you some basic Markdown syntax. Use this syntax in your R Markdown documents.
 
 ## Markdown basics
 

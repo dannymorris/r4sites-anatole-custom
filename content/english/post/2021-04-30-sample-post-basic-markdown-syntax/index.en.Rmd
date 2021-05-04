@@ -3,9 +3,6 @@ title: Sample post - Basic Markdown syntax
 summary: Not familiar with Markdown? This sample post introduces the basics
 author: Danny Morris
 date: '2021-04-30'
-output:
-  blogdown::html_page:
-    toc: true
 slug: []
 Description: ''
 Tags: [Markdown]
