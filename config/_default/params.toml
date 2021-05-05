@@ -1,8 +1,8 @@
 
-title = "I'm Jane Doe"
-author = "Danny Morris"
+title = "I'm [Your Name]"
+author = "Your Name"
 #copyright = "2020-2021"
-description = "Sample description - I help people launch personal websites, blogs, and project portfolios."
+description = "Use this space to convey a short message to your viewers describing your interests, goals, or skills"
 profilePicture = "images/dm-headshot-bw.jpg"
 keywords = ""
 favicon = "favicons/"
