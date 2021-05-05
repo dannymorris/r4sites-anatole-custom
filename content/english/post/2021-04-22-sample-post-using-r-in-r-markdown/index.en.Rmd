@@ -12,6 +12,7 @@ Description: 'Add additional information about the post using keywords to improv
 Tags: [R, R Markdown, Data Visualization]
 Categories: [R, R Markdown, Data Visualization]
 DisableComments: no
+thumbnail: "images/r.png"
 editor_options: 
   chunk_output_type: console
 ---
