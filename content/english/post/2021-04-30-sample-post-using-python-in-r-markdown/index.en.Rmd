@@ -2,7 +2,7 @@
 title: Sample post - Using Python in R Markdown
 summary: This post shows you how to use Python in an R Markdown document
 author: Danny Morris
-date: '2021-04-30'
+date: '2021-04-25'
 output:
   blogdown::html_page:
     highlight: tango
@@ -12,6 +12,7 @@ Description: ''
 Tags: [Python, Conda, Scikit-Learn]
 Categories: [Python, Conda, Scikit-Learn]
 DisableComments: no
+thumbnail: "images/python.jpg"
 editor_options: 
   chunk_output_type: console
 ---
